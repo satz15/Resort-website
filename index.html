@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flyhigh</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+        <!-- play cdn for tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                },
+    
+                fontFamily: {
+                  eb: ["Roboto", "sans-serif"],
+                  inter: ["Inter", "sansserif"],
+                },
+              },
+            },
+          };
+        </script>
+  </head>
+  <body>
+
+    <div>
+      <!-- Navbar content  -->
+      <div class="flex items-center justify-around h-[4rem]">
+        <div>
+          <h1 class="text-3xl font-bold">FlyHigh</h1>
+        </div>
+        <div class="flex items-center gap-[1rem] text-lg font-medium">
+          <span>Destination .</span>
+          <span>Booking .</span>
+          <span>Activities</span>
+          <i class="fa fa-search text-lg" aria-hidden="true"></i>
+        </div>
+        <div class="flex gap-[1rem] font-medium">
+          <button class="Log">Log In</button>
+          <button class="text-white bg-black rounded-lg w-[5rem] h-[2rem]">Sign Up</button>
+        </div>
+      </div>
+
+      <!-- image section  -->
+      <div class="relative flex justify-center mt-8 px-4">
+        <img class="w-full max-w-screen-lg h-auto rounded-xl" src="/img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" alt="resort">
+        <div class="absolute inset-0 flex flex-col items-center justify-center bottom-[15rem] right-[30rem]">
+          <h5 class="text-md font-medium right-[10rem]">-Blue Mountain Country Club and Resort</h5>
+          <h1 class=" text-4xl font-bold md:text-5xl lg:text-7xl font-bold">Treebo Tryst</h1>
+          <div class="flex gap-[8px] mt-8 ">
+          <i class="fa-solid fa-circle-arrow-left text-3xl"></i>
+          <i class="fa-solid fa-circle-arrow-right text-3xl"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
