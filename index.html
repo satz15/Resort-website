@@ -9,56 +9,195 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-        <!-- play cdn for tailwind -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-          tailwind.config = {
-            theme: {
-              extend: {
-                colors: {
-                },
-    
-                fontFamily: {
-                  eb: ["Roboto", "sans-serif"],
-                  inter: ["Inter", "sansserif"],
-                },
-              },
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- play cdn for tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              eb: ["Roboto", "sans-serif"],
+              inter: ["Inter", "sansserif"],
             },
-          };
-        </script>
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-
     <div>
       <!-- Navbar content  -->
-      <div class="flex items-center justify-around h-[4rem]">
+      <div
+        class="flex items-center justify-between h-[4rem] px-4 md:px-8 lg:px-12"
+      >
         <div>
           <h1 class="text-3xl font-bold">FlyHigh</h1>
         </div>
-        <div class="flex items-center gap-[1rem] text-lg font-medium">
-          <span>Destination .</span>
-          <span>Booking .</span>
+        <div class="hidden md:flex items-center gap-[1rem] text-lg font-medium">
+          <span>Destination</span>
+          <span>Booking</span>
           <span>Activities</span>
           <i class="fa fa-search text-lg" aria-hidden="true"></i>
         </div>
-        <div class="flex gap-[1rem] font-medium">
+        <div class="hidden md:flex gap-[1rem] font-medium">
           <button class="Log">Log In</button>
-          <button class="text-white bg-black rounded-lg w-[5rem] h-[2rem]">Sign Up</button>
+          <button class="text-white bg-black rounded-lg w-[5rem] h-[2rem]">
+            Sign Up
+          </button>
         </div>
+        <i class="fa fa-bars text-2xl md:hidden" aria-hidden="true"></i>
       </div>
 
       <!-- image section  -->
       <div class="relative flex justify-center mt-8 px-4">
-        <img class="w-full max-w-screen-lg h-auto rounded-xl" src="/img/roberto-nickson-MA82mPIZeGI-unsplash.jpg" alt="resort">
-        <div class="absolute inset-0 flex flex-col items-center justify-center bottom-[15rem] right-[30rem]">
-          <h5 class="text-md font-medium right-[10rem]">-Blue Mountain Country Club and Resort</h5>
-          <h1 class=" text-4xl font-bold md:text-5xl lg:text-7xl font-bold">Treebo Tryst</h1>
-          <div class="flex gap-[8px] mt-8 ">
-          <i class="fa-solid fa-circle-arrow-left text-3xl"></i>
-          <i class="fa-solid fa-circle-arrow-right text-3xl"></i></div>
+        <img
+          class="w-full max-w-screen-xl h-[20rem] sm:h-[30rem] lg:h-[40rem] rounded-2xl"
+          src="/img/roberto-nickson-MA82mPIZeGI-unsplash.jpg"
+          alt="resort"
+        />
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center p-4 lg:bottom-[15rem] lg:right-[30rem] text-center lg:text-left"
+        >
+          <h5 class="text-sm sm:text-md font-medium lg:right-[10rem]">
+            -Blue Mountain Country Club and Resort
+          </h5>
+          <h1 class="text-2xl sm:text-4xl font-bold md:text-5xl lg:text-7xl">
+            Treebo Tryst
+          </h1>
+          <div class="flex gap-[8px] mt-8">
+            <i class="fa-solid fa-circle-arrow-left text-3xl"></i>
+            <i class="fa-solid fa-circle-arrow-right text-3xl"></i>
+          </div>
+          <div
+            class="absolute bottom-4 left-1/2 transform -translate-x-1/2 lg:top-[35rem] lg:right-[1rem] lg:left-auto lg:transform-none bg-[#f1f5f9] h-[8rem] w-[90%] sm:w-[60rem] flex flex-row items-center justify-around gap-4 sm:gap-[5rem] rounded-xl px-4"
+          >
+            <div class="flex flex-col gap-[10px]">
+              <h4 class="font-bold">Location</h4>
+              <div class="flex flex-row items-center gap-[8px]">
+                <span class="underline underline-offset-2"
+                  >Enter Your Destination</span
+                >
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h4 class="font-bold">Activity</h4>
+              <div class="flex flex-row items-center gap-[8px]">
+                <span class="underline underline-offset-2">Bungee Jump</span>
+                <i class="fa-solid fa-circle-chevron-down"></i>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h4 class="font-bold">Date</h4>
+              <div class="flex flex-row items-center gap-[8px]">
+                <span class="underline underline-offset-2 bg-yellow"
+                  >Set Date</span
+                >
+                <i class="fa-regular fa-calendar-days"></i>
+              </div>
+            </div>
+            <i
+              class="fa fa-search flex items-center justify-center rounded-2xl text-xl text-white bg-black h-[2.5rem] w-[3rem]"
+              aria-hidden="true"
+            ></i>
+          </div>
         </div>
       </div>
 
+      <!-- swiper section  -->
+      <div
+        class="flex items-center justify-between pt-[5rem] px-4 md:px-8 lg:px-12"
+      >
+        <div class="flex flex-col gap-[8px]">
+          <h1 class="font-bold text-2xl">Trending 2024</h1>
+          <span
+            >Sost Brilliant reasons Entrada should be your One-Shop-Stop</span
+          >
+        </div>
+        <div class="flex items-center gap-[8px]">
+          <i class="fa-solid fa-circle-chevron-left text-4xl"></i>
+          <i class="fa-solid fa-circle-chevron-right text-4xl"></i>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 px-4">
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mt-10">
+          <div class="relative">
+            <img
+              src="/img/resort-1.jpg"
+              alt="Resort Image"
+              class="w-full h-48 sm:h-64 object-cover rounded-t-lg"
+            />
+            <div
+              class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+            >
+              ★ 4.5
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-b-lg shadow-lg">
+            <h2 class="font-bold text-xl mb-2">Forest Wild Life</h2>
+          </div>
+        </div>
+
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mt-10">
+          <div class="relative">
+            <img
+              src="/img/resort-3.jpg"
+              alt="Resort Image"
+              class="w-full h-48 sm:h-64 object-cover rounded-t-lg"
+            />
+            <div
+              class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+            >
+              ★ 4.6
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-b-lg shadow-lg">
+            <h2 class="font-bold text-xl mb-2">Sea View Villa</h2>
+          </div>
+        </div>
+
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mt-10">
+          <div class="relative">
+            <img
+              src="/img/resort-4.jpg"
+              alt="Resort Image"
+              class="w-full h-48 sm:h-64 object-cover rounded-t-lg"
+            />
+            <div
+              class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+            >
+              ★ 4.8
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-b-lg shadow-lg">
+            <h2 class="font-bold text-xl mb-2">Grand Inn</h2>
+          </div>
+        </div>
+
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 mt-10">
+          <div class="relative">
+            <img
+              src="/img/resort-5.jpg"
+              alt="Resort Image"
+              class="w-full h-48 sm:h-64 object-cover rounded-t-lg"
+            />
+            <div
+              class="absolute top-2 right-2 bg-white rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+            >
+              ★ 4.9
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-b-lg shadow-lg">
+            <h2 class="font-bold text-xl mb-2">Grand Inn</h2>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
